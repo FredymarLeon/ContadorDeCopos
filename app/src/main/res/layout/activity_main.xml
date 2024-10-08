@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/jaBebeu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ja_bebeu"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="50sp"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="5"
+        />
+
+    <TextView
+        android:id="@+id/copos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_copos"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_adicionar"
+            android:layout_marginTop="60dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:background="@color/black"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_subtrair"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            />
+
+
+    </RadioGroup>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

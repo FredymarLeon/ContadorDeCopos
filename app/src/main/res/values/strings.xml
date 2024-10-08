@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ContadorDeCopos</string>
+
+    <string name="title">Contador De Copos</string>
+    <string name="ja_bebeu">Você já bebeu</string>
+    <string name="numero_copos">%s</string>
+    <string name="text_copos">copos de água</string>
+    <string name="button_adicionar">+ 1 copo</string>
+    <string name="button_subtrair">- 1 copo</string>
+</resources>
