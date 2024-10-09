@@ -1,6 +1,7 @@
 package com.fleon.contadordecopos
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
@@ -10,13 +11,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    val titulo: TextView by lazy { findViewById(R.id.titulo)}
-    val bebeu: TextView by lazy { findViewById(R.id.jaBebeu) }
-    val copos: TextView by lazy { findViewById(R.id.copos) }
-    val radioGroup: RadioGroup by lazy { findViewById(R.id.radioGroup) }
-    val buttonSomar: RadioButton by lazy { findViewById(R.id.somarRadioB) }
-    val buttonSubtrair: RadioButton by lazy { findViewById(R.id.subtrairRadioB) }
 
+    val totalCoposBebidos: TextView by lazy { findViewById(R.id.numeroDeCopos) }
+    val buttonSomar: Button by lazy { findViewById(R.id.buttonAdicionarCopo) }
+    val buttonSubtrair: Button by lazy { findViewById(R.id.buttonSubtrairCopo) }
+
+    var coposBebidos: Int = 0
 
     var somarSelected: Boolean = false
     var subtrairSelected: Boolean = false
@@ -30,31 +30,20 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         SetupView()
-
     }
 
-    private fun SetupView(){
-        radioGroup.setOnCheckedChangeListener {_, checkedId ->
-            if (checkedId == R.id.somarRadioB){
-                somarSelected = true
-                subtrairSelected = false
-            } else {
-                somarSelected = false
-                subtrairSelected = true
-            }
-        }
-
+    private fun SetupView() {
         buttonSomar.setOnClickListener {
-            var contador = 0
-            while(contador >= 0) contador++
+            coposBebidos++
+            totalCoposBebidos.text = coposBebidos.toString()
         }
 
         buttonSubtrair.setOnClickListener{
-            var contador = 0
-            while (contador > 0) contador--
-
+            if(coposBebidos > 0) {
+                coposBebidos--
+            }
+                totalCoposBebidos.text = coposBebidos.toString()
         }
     }
 }
