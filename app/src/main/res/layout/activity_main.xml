@@ -63,23 +63,22 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <Button
+        <RadioButton
+            android:id="@+id/somarRadioB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_adicionar"
             android:layout_marginTop="60dp"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:background="@color/black"
-            />
-        <Button
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/subtrairRadioB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_subtrair"
             android:textSize="20sp"
             android:textAlignment="center"
             android:layout_marginTop="20dp"
-            android:background="@color/black"
             />
 
 
